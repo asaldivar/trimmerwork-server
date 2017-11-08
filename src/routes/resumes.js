@@ -4,13 +4,9 @@ const Resume = require('../models/Resume')
 resumesRouter.route('/')
 	.get((req, res) => {
 	  Resume.find((err, resumes) => {
-	  	console.log('in here')
-	  	if (err) {
-	  		console.log('error')
-	  		return res.send(err)
-	  	}
+	  	if (err) return res.json(err)
 
-	  	return res.json(resumes)
+	  	res.json(resumes)
 	  })
 	})
 	.post((req, res) => {

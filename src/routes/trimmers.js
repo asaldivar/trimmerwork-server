@@ -4,13 +4,9 @@ const Trimmer = require('../models/Trimmer')
 trimmersRouter.route('/')
 	.get((req, res) => {
 	  Trimmer.find((err, trimmers) => {
-	  	console.log('in here')
-	  	if (err) {
-	  		console.log('error')
-	  		return res.send(err)
-	  	}
+	  	if (err) return res.send(err)
 
-	  	return res.json(trimmers)
+	  	res.json(trimmers)
 	  })
 	})
 	.post((req, res) => {
