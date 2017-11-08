@@ -26,5 +26,3 @@ db.once("openUri", function(callback){
 
 
 app.listen(process.env.PORT || 8079)
-
-app.listen(process.env.PORT || 8081)
