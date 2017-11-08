@@ -6,7 +6,7 @@ trimmersRouter.route('/')
 	  Trimmer.find((err, trimmers) => {
 	  	if (err) return res.send(err)
 
-	  	res.json(trimmers)
+	  	return res.json(trimmers)
 	  })
 	})
 	.post((req, res) => {

@@ -6,7 +6,7 @@ jobsRouter.route('/')
 	  Job.find((err, jobs) => {
 	  	if (err) return res.json(err)
 
-	  	res.json(jobs)
+	  	return res.json(jobs)
 	  })
 	})
 	.post((req, res) => {
