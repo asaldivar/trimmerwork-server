@@ -4,7 +4,11 @@ const Trimmer = require('../models/Trimmer')
 trimmersRouter.route('/')
 	.get((req, res) => {
 	  Trimmer.find((err, trimmers) => {
-	  	if (err) return res.send(err)
+	  	console.log('in here')
+	  	if (err) {
+	  		console.log('error')
+	  		return res.send(err)
+	  	}
 
 	  	return res.json(trimmers)
 	  })

@@ -4,7 +4,11 @@ const Job = require('../models/Job')
 jobsRouter.route('/')
 	.get((req, res) => {
 	  Job.find((err, jobs) => {
-	  	if (err) return res.json(err)
+	  	console.log('in here')
+	  	if (err) {
+	  		console.log('error')
+	  		return res.send(err)
+	  	}
 
 	  	return res.json(jobs)
 	  })
