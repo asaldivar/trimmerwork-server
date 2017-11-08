@@ -14,7 +14,7 @@ app.use(cors())
 if (process.env.NODE_ENV = 'development') {
 	mongoose.connect('mongodb://localhost:27017/trimmerwork')
 }
-if (process.env.NODE_ENV = 'producion') {
+if (process.env.NODE_ENV = 'production') {
 	mongoose.connect('mongodb://heroku_86w0zdvn:mgomru9o8qgjd3g8svi9t9iq44@ds149495.mlab.com:49495/heroku_86w0zdvn')
 }
 const db = mongoose.connection
